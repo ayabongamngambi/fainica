@@ -179,15 +179,27 @@
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
         <sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
-          <a href="#projects" style="display: block; color: inherit;">
-            <div style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #ebe7e0;">
-              <img src="{{ p.img }}" alt="{{ p.alt }}" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+          <div style="color: inherit;">
+            <div onClick="{{ p.expand }}" title="Click to expand" style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #ebe7e0; cursor: zoom-in;">
+              <sc-for list="{{ p.frames }}" as="f" hint-placeholder-count="1">
+                <img src="{{ f.src }}" alt="{{ f.alt }}" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: {{ f.op }};" />
+              </sc-for>
+              <sc-if value="{{ p.many }}" hint-placeholder-val="{{ false }}">
+                <button type="button" onClick="{{ p.prev }}" aria-label="Previous photo" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; border: 0; padding: 0; cursor: pointer; background: rgba(20,20,15,0.42); color: #ffffff; font-family: Archivo, sans-serif; font-size: 20px; line-height: 1;" style-hover="background: rgba(20,20,15,0.78);">&#8249;</button>
+                <button type="button" onClick="{{ p.next }}" aria-label="Next photo" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; border: 0; padding: 0; cursor: pointer; background: rgba(20,20,15,0.42); color: #ffffff; font-family: Archivo, sans-serif; font-size: 20px; line-height: 1;" style-hover="background: rgba(20,20,15,0.78);">&#8250;</button>
+                <div style="position: absolute; left: 0; right: 0; bottom: 14px; display: flex; justify-content: center; gap: 7px;">
+                  <sc-for list="{{ p.dots }}" as="d" hint-placeholder-count="2">
+                    <button type="button" onClick="{{ d.go }}" aria-label="{{ d.label }}" style="width: 22px; height: 22px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; background: transparent; background-image: radial-gradient({{ d.bg }} 0 3.5px, transparent 3.5px);"></button>
+                  </sc-for>
+                </div>
+                <span style="position: absolute; right: 12px; top: 12px; padding: 5px 9px; background: rgba(20,20,15,0.5); color: #ffffff; font-family: Archivo, sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.14em;">{{ p.counter }}</span>
+              </sc-if>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
               <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">{{ p.title }}</h3>
               <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">{{ p.kind }}</span>
             </div>
-          </a>
+          </div>
         </sc-for>
       </div>
     </section>
@@ -449,10 +461,141 @@
 
 </div>
 
+
+  <sc-if value="{{ lb.open }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ lb.close }}" style="position: fixed; inset: 0; z-index: 90; background: rgba(14,13,10,0.93); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 4vh 5vw; cursor: zoom-out;">
+      <div style="display: flex; align-items: baseline; gap: 14px; color: #ffffff;">
+        <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.04em;">{{ lb.title }}</h3>
+        <span style="font-family: Archivo, sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.55);">{{ lb.kind }}</span>
+      </div>
+      <div onClick="{{ lb.stop }}" onTouchStart="{{ lb.onTouchStart }}" onTouchEnd="{{ lb.onTouchEnd }}" style="display: flex; align-items: center; justify-content: center; max-width: 100%; cursor: default; touch-action: pan-y;">
+        <sc-for list="{{ lb.frames }}" as="f" hint-placeholder-count="1">
+          <img src="{{ f.src }}" alt="{{ f.alt }}" style="max-width: 100%; max-height: 74vh; width: auto; height: auto; object-fit: contain;" />
+        </sc-for>
+      </div>
+      <sc-if value="{{ lb.many }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ lb.stop }}" style="display: flex; align-items: center; gap: 18px; cursor: default;">
+          <button type="button" onClick="{{ lb.prev }}" aria-label="Previous photo" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.28); padding: 0; cursor: pointer; background: transparent; color: #ffffff; font-family: Archivo, sans-serif; font-size: 20px; line-height: 1;" style-hover="background: rgba(255,255,255,0.14);">&#8249;</button>
+          <div style="display: flex; gap: 8px;">
+            <sc-for list="{{ lb.dots }}" as="d" hint-placeholder-count="2">
+              <button type="button" onClick="{{ d.go }}" aria-label="{{ d.label }}" style="width: 8px; height: 8px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; background: {{ d.bg }};"></button>
+            </sc-for>
+          </div>
+          <button type="button" onClick="{{ lb.next }}" aria-label="Next photo" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.28); padding: 0; cursor: pointer; background: transparent; color: #ffffff; font-family: Archivo, sans-serif; font-size: 20px; line-height: 1;" style-hover="background: rgba(255,255,255,0.14);">&#8250;</button>
+          <span style="font-family: Archivo, sans-serif; font-size: 11px; letter-spacing: 0.16em; color: rgba(255,255,255,0.6);">{{ lb.counter }}</span>
+        </div>
+      </sc-if>
+      <button type="button" onClick="{{ lb.close }}" aria-label="Close" style="position: absolute; top: 22px; right: 5vw; width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.28); padding: 0; cursor: pointer; background: transparent; color: #ffffff; font-family: Archivo, sans-serif; font-size: 17px; line-height: 1;" style-hover="background: rgba(255,255,255,0.14);">&#10005;</button>
+    </div>
+  </sc-if>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{}">
 class Component extends DCLogic {
-  state = { page: 'home', formError: '', postIndex: 0 };
+  state = { page: 'home', formError: '', postIndex: 0, slides: {}, lightbox: null };
+
+  // Each project's imgs array drives its slideshow. To add a photo:
+  // drop the file in assets/ and add its path to that project's imgs list.
+  PROJECTS = [
+    { kind: 'Interiors', title: 'Bedroom Styling', alt: 'Bedroom with hand-painted leaf mural styled by Fainica Consultancy', imgs: ['assets/p-bedroom.jpg', 'assets/j-bedroom.jpg'] },
+    { kind: 'Interiors', title: 'Bathroom Styling', alt: 'Bathroom with twin basins and arched mirrors styled by Fainica Consultancy', imgs: ['assets/p-bathroom.jpg', 'assets/j-bathtub.jpg'] },
+    { kind: 'Interiors', title: 'Kitchen Styling', alt: 'Kitchen with lit display cabinetry and bar stools styled by Fainica Consultancy', imgs: ['assets/p-kitchen.jpg'] },
+    { kind: 'Interiors', title: 'Lounge Styling', alt: 'Lounge with painted feature wall and sculptural seating by Fainica Consultancy', imgs: ['assets/p-lounge.jpg'] },
+    { kind: 'Commercial', title: 'Commercial Space', alt: 'Commercial waiting area with feature brick wall styled by Fainica Consultancy', imgs: ['assets/p-commercial.jpg', 'assets/p-office.jpg'] },
+    { kind: 'Interiors', title: 'Dining Styling', alt: 'Dining table with travertine base and cream chairs styled by Fainica Consultancy', imgs: ['assets/p-dining.jpg'] }
+  ];
+
+  componentDidMount() {
+    this.onKey = (e) => {
+      if (this.state.lightbox === null) return;
+      if (e.key === 'Escape') this.setState({ lightbox: null });
+      if (e.key === 'ArrowRight') this.stepLightbox(1);
+      if (e.key === 'ArrowLeft') this.stepLightbox(-1);
+    };
+    window.addEventListener('keydown', this.onKey);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.onKey);
+  }
+
+  stepLightbox = (d) => {
+    const i = this.state.lightbox;
+    if (i === null) return;
+    const n = this.PROJECTS[i].imgs.length;
+    this.setSlide(i, (this.state.slides[i] || 0) + d + n * 2);
+  };
+
+  openLightbox = (i) => () => this.setState({ lightbox: i });
+  closeLightbox = () => this.setState({ lightbox: null });
+
+  lightboxVals() {
+    const i = this.state.lightbox;
+    if (i === null) return { open: false, frames: [], dots: [], counter: '', title: '', kind: '', many: false, close: this.closeLightbox };
+    const p = this.PROJECTS[i];
+    const n = p.imgs.length;
+    const cur = (((this.state.slides[i] || 0) % n) + n) % n;
+    const self = this;
+    return {
+      open: true,
+      title: p.title,
+      kind: p.kind,
+      many: n > 1,
+      counter: (cur + 1) + ' / ' + n,
+      frames: [{ src: p.imgs[cur], alt: p.alt }],
+      alt: p.alt,
+      close: this.closeLightbox,
+      stop: function (e) { if (e) e.stopPropagation(); },
+      onTouchStart: function (e) { self.touchX = e.touches[0].clientX; },
+      onTouchEnd: function (e) {
+        if (self.touchX === null || self.touchX === undefined) return;
+        const dx = e.changedTouches[0].clientX - self.touchX;
+        self.touchX = null;
+        if (Math.abs(dx) > 45) self.stepLightbox(dx < 0 ? 1 : -1);
+      },
+      prev: function (e) { if (e) e.stopPropagation(); self.stepLightbox(-1); },
+      next: function (e) { if (e) e.stopPropagation(); self.stepLightbox(1); },
+      dots: p.imgs.map(function (src, j) {
+        return {
+          go: function (e) { if (e) e.stopPropagation(); self.setSlide(i, j); },
+          bg: j === cur ? '#ffffff' : 'rgba(255,255,255,0.4)',
+          label: p.title + ' photo ' + (j + 1)
+        };
+      })
+    };
+  }
+
+  setSlide = (i, n) => {
+    this.setState(function (s) {
+      const next = Object.assign({}, s.slides);
+      next[i] = n;
+      return { slides: next };
+    });
+  };
+
+  projectCards() {
+    const self = this;
+    return this.PROJECTS.map(function (p, i) {
+      const n = p.imgs.length;
+      const cur = (((self.state.slides[i] || 0) % n) + n) % n;
+      return Object.assign({}, p, {
+        many: n > 1,
+        counter: (cur + 1) + ' / ' + n,
+        frames: p.imgs.map(function (src, j) {
+          return { src: src, alt: p.alt, op: j === cur ? 1 : 0 };
+        }),
+        dots: p.imgs.map(function (src, j) {
+          return {
+            go: function (e) { if (e) e.stopPropagation(); self.setSlide(i, j); },
+            bg: j === cur ? '#ffffff' : 'rgba(255,255,255,0.42)',
+            label: p.title + ' photo ' + (j + 1)
+          };
+        }),
+        prev: function (e) { if (e) e.stopPropagation(); self.setSlide(i, cur - 1); },
+        next: function (e) { if (e) e.stopPropagation(); self.setSlide(i, cur + 1); },
+        expand: self.openLightbox(i)
+      });
+    });
+  }
 
 
 
@@ -594,14 +737,8 @@ class Component extends DCLogic {
         { no: '07', name: 'Intimate Events Styling', note: 'Small gatherings styled with intention and restraint.' },
         { no: '08', name: 'D\u00e9cor Sourcing', note: 'Furniture, d\u00e9cor and finishing touches sourced to brief.' }
       ],
-      projects: [
-        { kind: 'Interiors', title: 'Bedroom Styling', alt: 'Bedroom with hand-painted leaf mural styled by Fainica Consultancy', img: 'assets/p-bedroom.jpg' },
-        { kind: 'Interiors', title: 'Bathroom Styling', alt: 'Bathroom with twin basins and arched mirrors styled by Fainica Consultancy', img: 'assets/p-bathroom.jpg' },
-        { kind: 'Interiors', title: 'Kitchen Styling', alt: 'Kitchen with lit display cabinetry and bar stools styled by Fainica Consultancy', img: 'assets/p-kitchen.jpg' },
-        { kind: 'Interiors', title: 'Lounge Styling', alt: 'Lounge with painted feature wall and sculptural seating by Fainica Consultancy', img: 'assets/p-lounge.jpg' },
-        { kind: 'Commercial', title: 'Commercial Space', alt: 'Commercial waiting area with feature brick wall styled by Fainica Consultancy', img: 'assets/p-commercial.jpg' },
-        { kind: 'Interiors', title: 'Dining Styling', alt: 'Dining table with travertine base and cream chairs styled by Fainica Consultancy', img: 'assets/p-dining.jpg' }
-      ],
+      projects: this.projectCards(),
+      lb: this.lightboxVals(),
       process: [
         { no: '01', title: 'Consultation', body: "Understanding the client's vision, needs, and preferences." },
         { no: '02', title: 'Concept Development', body: 'Creation of mood boards, colour palettes and styling direction.' },
