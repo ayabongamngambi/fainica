@@ -1,31 +1,33 @@
 # Fainica Consultancy
 
-Website for Fainica Consultancy — interior styling, wardrobe styling and creative direction. Middelburg, Mpumalanga, working countrywide.
+Website for Fainica Consultancy: interior styling, content creation and event co-ordination. Middelburg, Mpumalanga, working countrywide.
 
-## Contents
+## Pages (all at the top level)
 
-- `index.html` — the full site (single page with in-page routing for portfolio, journal and enquiry views)
-- `support.js` — runtime required by `index.html`
-- `assets/` — photography, logos, favicon
-- `robots.txt`, `sitemap.xml` — search engine files
-- `.nojekyll` — tells GitHub Pages to serve files as-is
+- `index.html` Home
+- `about.html` About, process, team, why choose us
+- `services.html` Overview of the three services
+- `interior-styling.html`, `content-creation.html`, `event-coordination.html` One page per service
+- `portfolio.html` Gallery with lightbox, grouped by service
+- `articles.html` and `article-*.html` Articles
+- `contact.html` Quote form (opens WhatsApp)
+- `404.html`, `sitemap.xml`, `robots.txt`, `llms.txt`
+- `site.js` Slideshow, lightbox and quote form. No other scripts.
+- `_headers` Security headers for Cloudflare Pages (CSP, no framing, no sniffing)
+- `assets/` Photography, logos, favicon
+
+## Placeholder photos
+
+Content creation and event images are free Pexels photos (loaded from images.pexels.com) until real photos are supplied. To replace one, drop the new file in `assets/` and change its path in the page. If all Pexels links are removed, also remove `https://images.pexels.com` from `_headers`.
 
 ## Local preview
 
-Serve the folder over HTTP (opening the file directly will block the script):
+The pages use clean URLs (`/about`), so preview with a server that supports them:
 
 ```
-python3 -m http.server 8000
+npx serve .
 ```
-
-Then open http://localhost:8000
 
 ## Deploy
 
-**GitHub Pages** — push this folder to a repo, then Settings → Pages → deploy from branch, root. Add `fainicaconsultancy.co.za` as the custom domain.
-
-**Cloudflare Pages** — connect the repo, leave the build command empty, set the output directory to `/`.
-
-## Contact
-
-WhatsApp 081 762 0160 · Calls 082 837 7562 · Fainicaconsultancy2@gmail.com
+Cloudflare Pages: connect the repo, leave the build command empty, set the output directory to `/`.
