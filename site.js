@@ -114,6 +114,31 @@
     });
   }
 
+
+  /* ---------- Floating WhatsApp button: appears after the hero, hides near other contact options ---------- */
+  var wa = document.querySelector('.wa-float');
+  if (wa) {
+    var heroEls = document.querySelectorAll('[data-wa-hero]');
+    var hideEls = document.querySelectorAll('[data-wa-hide]');
+    if (!('IntersectionObserver' in window)) {
+      wa.classList.add('is-on');
+    } else {
+      var seen = new Map();
+      var update = function () {
+        var blocked = false;
+        seen.forEach(function (v) { if (v) blocked = true; });
+        wa.classList.toggle('is-on', !blocked);
+      };
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { seen.set(e.target, e.isIntersecting); });
+        update();
+      });
+      Array.prototype.forEach.call(heroEls, function (el) { seen.set(el, true); io.observe(el); });
+      Array.prototype.forEach.call(hideEls, function (el) { seen.set(el, false); io.observe(el); });
+      update();
+    }
+  }
+
   /* ---------- Contact: quote form opens WhatsApp ---------- */
   var send = document.getElementById('send-wa');
   if (send) {

@@ -12,7 +12,8 @@ Website for Fainica Consultancy: interior styling, content creation and event co
 - `articles.html` and `article-*.html` Articles
 - `contact.html` Quote form (opens WhatsApp)
 - `404.html`, `sitemap.xml`, `robots.txt`, `llms.txt`
-- `site.js` Slideshow, lightbox and quote form. No other scripts.
+- `site.js` Slideshow, lightbox, quote form and the floating WhatsApp button
+- `assets/bootstrap-custom.min.css` and `assets/bootstrap-offcanvas.min.js` A trimmed local Bootstrap 5.3.8 build: grid, utilities and the slide-in mobile menu only, with no global resets, so the existing look is untouched
 - `_headers` Security headers for Cloudflare Pages (CSP, no framing, no sniffing)
 - `assets/` Photography, logos, favicon
 
@@ -29,5 +30,7 @@ npx serve .
 ```
 
 ## Deploy
+
+The WhatsApp float is hidden until the hero has scrolled out of view, and hides again beside the call-to-action band, the footer and the quote form.
 
 Cloudflare Pages: connect the repo, leave the build command empty, set the output directory to `/`.

@@ -81,31 +81,55 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/bootstrap-custom.min.css" />
+<noscript><style>.wa-float { opacity: 1 !important; visibility: visible !important; transform: none !important; }</style></noscript>
 <style>
   body { margin: 0; background: #ffffff; }
   a { color: oklch(0.56 0.075 72); text-decoration: none; }
   a:hover { color: #1a1a18; }
   .sl-btn:hover { background: rgba(20,20,15,0.78) !important; }
   .lb-btn:hover { background: rgba(255,255,255,0.14) !important; }
-  @media (max-width: 960px) {
-    .site-header { flex-wrap: wrap; justify-content: center !important; }
-    .site-nav { flex-wrap: wrap; justify-content: center; gap: 12px 20px !important; }
+  .menu-btn:focus-visible, .wa-float:focus-visible, .btn-fn:focus-visible { outline: 2px solid oklch(0.72 0.1 78); outline-offset: 3px; }
+  .wa-float { opacity: 0; visibility: hidden; transform: translateY(14px); transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; }
+  .wa-float.is-on { opacity: 1; visibility: visible; transform: none; }
+  .menu-link { display: block; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.12); font-family: Archivo, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.78); }
+  .menu-link:hover { color: #ffffff; }
+  @media (max-width: 575.98px) {
+    .btn-fn { display: block !important; text-align: center; padding: 16px 18px !important; letter-spacing: 0.14em !important; }
+    .btn-row { flex-direction: column; align-items: stretch; }
+    .hero-inner { padding-top: 132px !important; padding-bottom: 14vh !important; }
+    .wa-float { right: 14px !important; bottom: max(14px, env(safe-area-inset-bottom)) !important; padding: 12px 16px !important; letter-spacing: 0.12em !important; }
   }
 </style>
 </head>
 <body>
 <div style="font-family: Barlow, sans-serif; color: #1a1a18; background: #ffffff; overflow-x: hidden;">
-  <header class="site-header" style="position: absolute; top: 0; left: 0; right: 0; z-index: 40; display: flex; justify-content: space-between; align-items: center; gap: 28px; padding: 22px 5vw;">
+  <header class="site-header" style="position: absolute; top: 0; left: 0; right: 0; z-index: 40; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 5vw;">
     <a href="/" style="display: block;">
-      <img src="/assets/fainica-mark-light.png" alt="Fainica Consultancy, creative stylists in Middelburg" width="180" height="62" style="display: block; height: 62px; width: auto;" />
+      <img src="/assets/fainica-mark-light.png" alt="Fainica Consultancy, creative stylists in Middelburg" width="180" height="62" style="display: block; height: 58px; width: auto;" />
     </a>
-    <nav class="site-nav" aria-label="Main" style="display: flex; align-items: center; gap: 28px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #ffffff;">
+    <nav class="d-none d-lg-flex" aria-label="Main" style="align-items: center; gap: 28px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #ffffff;">
       <a href="/" style="color: rgba(255,255,255,0.75);">Home</a><a href="/about" style="color: rgba(255,255,255,0.75);">About</a><a href="/services" style="color: #ffffff;">Services</a><a href="/portfolio" style="color: rgba(255,255,255,0.75);">Portfolio</a><a href="/articles" style="color: rgba(255,255,255,0.75);">Articles</a><a href="/contact" style="padding: 13px 22px; background: oklch(0.62 0.09 75); color: #14140f;">Get a quote</a>
     </nav>
+    <button type="button" class="menu-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#site-menu" aria-controls="site-menu" aria-label="Open menu" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; width: 48px; height: 48px; padding: 0; border: 1px solid rgba(255,255,255,0.4); background: rgba(20,20,15,0.35); cursor: pointer;"><span style="display: block; width: 22px; height: 2px; background: #ffffff;"></span><span style="display: block; width: 22px; height: 2px; background: #ffffff;"></span><span style="display: block; width: 22px; height: 2px; background: #ffffff;"></span></button>
   </header>
 
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="site-menu" aria-label="Menu" style="width: min(86vw, 360px); background: #14140f; color: #ffffff; border-left: 0;">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 18px 24px;">
+      <img src="/assets/fainica-mark-light.png" alt="Fainica Consultancy" width="140" height="48" style="display: block; height: 48px; width: auto;" />
+      <button type="button" data-bs-dismiss="offcanvas" aria-label="Close menu" style="width: 48px; height: 48px; padding: 0; border: 1px solid rgba(255,255,255,0.28); background: transparent; color: #ffffff; font-size: 17px; line-height: 1; cursor: pointer;">&#10005;</button>
+    </div>
+    <nav aria-label="Menu" style="display: flex; flex-direction: column; padding: 8px 24px 0;">
+      <a class="menu-link" href="/">Home</a><a class="menu-link" href="/about">About</a><a class="menu-link" href="/services" aria-current="page" style="color: #ffffff; border-left: 3px solid oklch(0.62 0.09 75); padding-left: 14px;">Services</a><a class="menu-link" href="/portfolio">Portfolio</a><a class="menu-link" href="/articles">Articles</a>
+    </nav>
+    <div style="display: flex; flex-direction: column; gap: 12px; padding: 28px 24px 32px;">
+      <a class="btn-fn" href="/contact" style="display: block; padding: 16px 18px; text-align: center; background: oklch(0.62 0.09 75); color: #14140f; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;">Get a quote</a>
+      <a href="https://wa.me/27817620160?text=Hi%20Fainica%20Consultancy!" target="_blank" rel="noopener" style="display: block; padding: 16px 18px; text-align: center; border: 1px solid rgba(255,255,255,0.4); color: #ffffff; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;">WhatsApp us</a>
+    </div>
+  </div>
+
   <main>
-    <section style="position: relative; padding: 20vh 5vw 12vh; overflow: hidden; background: #232019; color: #ffffff;">
+    <section data-wa-hero style="position: relative; padding: 20vh 5vw 12vh; overflow: hidden; background: #232019; color: #ffffff;">
       <img src="https://images.pexels.com/photos/17001829/pexels-photo-17001829/free-photo-of-row-of-reserved-seats.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Row of reserved seats with floral decor at an event" fetchpriority="high" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
       <div style="position: absolute; inset: 0; background: rgba(20,20,15,0.82);"></div>
       <span style="position: relative; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: oklch(0.72 0.1 78);">Event Co-ordination</span>
@@ -213,27 +237,23 @@
     </section>
   </main>
 
-  <section style="display: flex; flex-direction: column; align-items: center; gap: 26px; padding: clamp(56px, 7vw, 100px) 5vw; background: #1a1a18; color: #ffffff; text-align: center;">
+  <section data-wa-hide style="display: flex; flex-direction: column; align-items: center; gap: 26px; padding: clamp(56px, 7vw, 100px) 5vw; background: #1a1a18; color: #ffffff; text-align: center;">
     <h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(26px, 3.8vw, 54px); line-height: 1.08; text-transform: uppercase; max-width: 26ch;">Ready to work with us?</h2>
     <p style="margin: 0; max-width: 52ch; font-size: 17px; line-height: 1.75; color: rgba(255,255,255,0.78);">This is more than just business, it&rsquo;s a partnership built on trust and purpose.</p>
-    <a href="/contact" style="padding: 18px 36px; background: oklch(0.62 0.09 75); color: #14140f; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;">Let&rsquo;s bring your vision to life</a>
+    <a class="btn-fn" href="/contact" style="padding: 18px 36px; background: oklch(0.62 0.09 75); color: #14140f; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;">Let&rsquo;s bring your vision to life</a>
   </section>
-  <footer style="padding: clamp(48px, 6vw, 76px) 5vw 26px; background: #14140f; color: rgba(255,255,255,0.66);">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
-      <div style="display: flex; flex-direction: column; gap: 16px;">
-        <img src="/assets/fainica-mark-light.png" alt="Fainica Consultancy logo" width="168" height="58" style="display: block; width: 168px; height: auto;" />
-        <p style="margin: 0; font-size: 14px; line-height: 1.8;">Faithful Advisers. Bringing your vision to life.</p>
-        <span style="font-size: 12px; color: rgba(255,255,255,0.42);">Reg No: 2026/331052/07 &middot; Est 2025</span>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 12px;">
-        <h3 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Links</h3>
-        <a href="/" style="font-size: 14px; color: rgba(255,255,255,0.66);">Home</a><a href="/about" style="font-size: 14px; color: rgba(255,255,255,0.66);">About</a><a href="/services" style="font-size: 14px; color: rgba(255,255,255,0.66);">Services</a><a href="/portfolio" style="font-size: 14px; color: rgba(255,255,255,0.66);">Portfolio</a><a href="/articles" style="font-size: 14px; color: rgba(255,255,255,0.66);">Articles</a><a href="/contact" style="font-size: 14px; color: rgba(255,255,255,0.66);">Contact</a>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 12px;">
+  <footer data-wa-hide style="padding: clamp(48px, 6vw, 76px) 5vw 26px; background: #14140f; color: rgba(255,255,255,0.66); text-align: center;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+      <img src="/assets/fainica-mark-light.png" alt="Fainica Consultancy logo" width="168" height="58" style="display: block; width: 168px; height: auto;" />
+      <p style="margin: 0; font-size: 14px; line-height: 1.8;">Faithful Advisers. Bringing your vision to life.</p>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.42);">Reg No: 2026/331052/07 &middot; Est 2025</span>
+    </div>
+    <div class="row g-5 justify-content-center" style="margin-top: 36px;">
+      <div class="col-12 col-md-5 col-lg-4" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
         <h3 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Services</h3>
         <a href="/interior-styling" style="font-size: 14px; color: rgba(255,255,255,0.66);">Interior Styling</a><a href="/content-creation" style="font-size: 14px; color: rgba(255,255,255,0.66);">Content Creation</a><a href="/event-coordination" style="font-size: 14px; color: rgba(255,255,255,0.66);">Event Co-ordination</a><a href="/article-wardrobe-styling-tips" style="font-size: 14px; color: rgba(255,255,255,0.66);">Wardrobe styling</a>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div class="col-12 col-md-5 col-lg-4" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
         <h3 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Have a question?</h3>
         <a href="mailto:Fainicaconsultancy2@gmail.com" style="font-size: 14px; color: rgba(255,255,255,0.66);">Fainicaconsultancy2@gmail.com</a>
         <a href="https://wa.me/27817620160" target="_blank" rel="noopener" style="font-size: 14px; color: rgba(255,255,255,0.66);">081 762 0160 (WhatsApp)</a>
@@ -241,15 +261,17 @@
         <span style="font-size: 14px;">South Africa</span>
       </div>
     </div>
-    <div style="margin-top: 44px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.14); display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px;">
+    <div style="margin-top: 44px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.14); font-size: 12px;">
       <span>&copy; 2026 Fainica Consultancy (Pty) Ltd. All rights reserved.</span>
     </div>
   </footer>
 
-  <a href="https://wa.me/27817620160?text=Hi%20Fainica%20Consultancy!" target="_blank" rel="noopener" style="position: fixed; right: 22px; bottom: 22px; z-index: 60; display: flex; align-items: center; gap: 10px; padding: 14px 20px; background: oklch(0.62 0.09 75); color: #14140f; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; box-shadow: 0 10px 30px rgba(20,20,15,0.3);">
+  <a class="wa-float" href="https://wa.me/27817620160?text=Hi%20Fainica%20Consultancy!" target="_blank" rel="noopener" style="position: fixed; right: 22px; bottom: 22px; z-index: 60; display: flex; align-items: center; gap: 10px; padding: 14px 20px; background: oklch(0.62 0.09 75); color: #14140f; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; box-shadow: 0 10px 30px rgba(20,20,15,0.3);">
     <span style="width: 8px; height: 8px; border-radius: 50%; background: #14140f;"></span>WhatsApp us
   </a>
 
 </div>
+<script src="/assets/bootstrap-offcanvas.min.js" defer></script>
+<script src="/site.js" defer></script>
 </body>
 </html>
