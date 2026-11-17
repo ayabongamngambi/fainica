@@ -182,15 +182,21 @@
   ]
 }
 </script>
-<link rel="preload" as="image" href="/assets/hero-kitchen.jpg" fetchpriority="high" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="/assets/hero-kitchen.jpg" imagesrcset="/assets/hero-kitchen-800.jpg 800w, /assets/hero-kitchen.jpg 1400w" imagesizes="100vw" fetchpriority="high" />
+<link rel="preload" href="/assets/fonts/archivo-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="/assets/bootstrap-custom.min.css" />
 <noscript><style>.wa-float { opacity: 1 !important; visibility: visible !important; transform: none !important; }</style></noscript>
 <style>
+@font-face { font-family: Archivo; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/archivo-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: Archivo; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/archivo-latin-500-normal.woff2) format("woff2"); }
+@font-face { font-family: Archivo; font-style: normal; font-weight: 600; font-display: swap; src: url(/assets/fonts/archivo-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: Archivo; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/archivo-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 300; font-display: swap; src: url(/assets/fonts/barlow-latin-300-normal.woff2) format("woff2"); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/barlow-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/barlow-latin-500-normal.woff2) format("woff2"); }
   body { margin: 0; background: #ffffff; }
-  a { color: oklch(0.56 0.075 72); text-decoration: none; }
+  a { color: oklch(0.52 0.075 72); text-decoration: none; }
   a:hover { color: #1a1a18; }
   .sl-btn:hover { background: rgba(20,20,15,0.78) !important; }
   .lb-btn:hover { background: rgba(255,255,255,0.14) !important; }
@@ -237,7 +243,7 @@
   <main>
 
     <section data-wa-hero style="position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; background: #232019;">
-      <img src="/assets/hero-kitchen.jpg" alt="Styled kitchen with warm cabinet lighting by Fainica Consultancy" fetchpriority="high" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+      <img src="/assets/hero-kitchen.jpg" srcset="/assets/hero-kitchen-800.jpg 800w, /assets/hero-kitchen.jpg 1400w" sizes="100vw" width="1400" height="1050" alt="Styled kitchen with warm cabinet lighting by Fainica Consultancy" fetchpriority="high" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
       <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,20,15,0.86) 0%, rgba(20,20,15,0.72) 45%, rgba(20,20,15,0.34) 100%);"></div>
       <div class="hero-inner" style="position: relative; padding: max(170px, 12vh) 5vw 16vh; max-width: 900px;">
         <h1 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(38px, 6vw, 92px); line-height: 1.02; letter-spacing: -0.02em; color: #ffffff; text-transform: uppercase; text-wrap: pretty;">We bring your vision to life</h1>
@@ -252,24 +258,24 @@
     <section style="position: relative; z-index: 10; margin: -84px 5vw 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: #e4e0d8; box-shadow: 0 24px 60px rgba(26,26,24,0.12);">
       <div style="display: flex; flex-direction: column; gap: 12px; padding: 40px 34px; background: #ffffff;">
         <span style="font-family: Archivo, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: oklch(0.62 0.09 75);">01</span>
-        <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 19px; font-weight: 600; letter-spacing: 0.01em;">Faithful Guidance</h3>
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-size: 19px; font-weight: 600; letter-spacing: 0.01em;">Faithful Guidance</h2>
         <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #5d5a53;">Advice you can act on, given with honesty and care for your budget.</p>
       </div>
       <div style="display: flex; flex-direction: column; gap: 12px; padding: 40px 34px; background: #ffffff;">
         <span style="font-family: Archivo, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: oklch(0.62 0.09 75);">02</span>
-        <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 19px; font-weight: 600; letter-spacing: 0.01em;">Intentional Design</h3>
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-size: 19px; font-weight: 600; letter-spacing: 0.01em;">Intentional Design</h2>
         <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #5d5a53;">Every choice of colour, texture and light has a reason behind it.</p>
       </div>
       <div style="display: flex; flex-direction: column; gap: 12px; padding: 40px 34px; background: #ffffff;">
         <span style="font-family: Archivo, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: oklch(0.62 0.09 75);">03</span>
-        <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 19px; font-weight: 600; letter-spacing: 0.01em;">Styled To Completion</h3>
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-size: 19px; font-weight: 600; letter-spacing: 0.01em;">Styled To Completion</h2>
         <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #5d5a53;">We stay until the last finishing touch is in place.</p>
       </div>
     </section>
 
     <section style="padding: clamp(64px, 8vw, 110px) 5vw;">
       <div style="text-align: center; max-width: 62ch; margin: 0 auto 52px;">
-        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.56 0.075 72);">What we do</span>
+        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.52 0.075 72);">What we do</span>
         <h2 style="margin: 16px 0 14px; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(28px, 3.6vw, 50px); text-transform: uppercase;">Three ways we bring your vision to life</h2>
         <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #5d5a53;">Start with one service or combine all three.</p>
       </div>
@@ -279,7 +285,7 @@
             <img src="/assets/p-lounge.jpg" alt="Lounge with painted feature wall and sculptural seating by Fainica Consultancy" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
           </div>
           <div style="padding: 28px 24px 32px; background: #f5f2ec; border-bottom: 3px solid oklch(0.62 0.09 75);">
-            <span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; color: oklch(0.56 0.075 72);">01</span>
+            <span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; color: oklch(0.52 0.075 72);">01</span>
             <h3 style="margin: 12px 0 10px; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; color: #1a1a18;">Interior Styling</h3>
             <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.75; color: #5d5a53;">Homes, guesthouses and workspaces styled with colour, texture, light and furniture that works for how you live.</p>
             <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #1a1a18;">Explore Interior Styling</span>
@@ -287,10 +293,10 @@
         </a>
         <a href="/content-creation" style="display: block; color: inherit;">
           <div style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #ebe7e0;">
-            <img src="https://images.pexels.com/photos/17094504/pexels-photo-17094504.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Photographer standing between studio lights preparing for a shoot" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+            <img src="https://images.pexels.com/photos/17094504/pexels-photo-17094504.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Photographer standing between studio lights preparing for a shoot" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
           </div>
           <div style="padding: 28px 24px 32px; background: #f5f2ec; border-bottom: 3px solid oklch(0.62 0.09 75);">
-            <span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; color: oklch(0.56 0.075 72);">02</span>
+            <span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; color: oklch(0.52 0.075 72);">02</span>
             <h3 style="margin: 12px 0 10px; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; color: #1a1a18;">Content Creation</h3>
             <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.75; color: #5d5a53;">Styling, shooting and creative direction that turn your brand&rsquo;s story into content people remember.</p>
             <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #1a1a18;">Explore Content Creation</span>
@@ -298,10 +304,10 @@
         </a>
         <a href="/event-coordination" style="display: block; color: inherit;">
           <div style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #ebe7e0;">
-            <img src="https://images.pexels.com/photos/7248005/pexels-photo-7248005.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Elegantly styled event table with floral decor and place settings" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+            <img src="https://images.pexels.com/photos/7248005/pexels-photo-7248005.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Elegantly styled event table with floral decor and place settings" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
           </div>
           <div style="padding: 28px 24px 32px; background: #f5f2ec; border-bottom: 3px solid oklch(0.62 0.09 75);">
-            <span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; color: oklch(0.56 0.075 72);">03</span>
+            <span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; color: oklch(0.52 0.075 72);">03</span>
             <h3 style="margin: 12px 0 10px; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600; color: #1a1a18;">Event Co-ordination</h3>
             <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.75; color: #5d5a53;">Events planned, styled and run on the day, so you can enjoy them as a guest.</p>
             <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #1a1a18;">Explore Event Co-ordination</span>
@@ -315,11 +321,11 @@
         <img src="/assets/about-lounge.jpg" alt="Curated interior styling project by Fainica Consultancy" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
       </div>
       <div>
-        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.56 0.075 72);">About &middot; Est 2025</span>
+        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.52 0.075 72);">About &middot; Est 2025</span>
         <h2 style="margin: 16px 0 24px; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(28px, 3.6vw, 50px); line-height: 1.1; text-transform: uppercase;">Styling and creative direction, done with intention</h2>
         <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.85; color: #5d5a53;">Fainica Consultancy is a creative consultancy founded by Faith Malesoena and Duduzile Monica Mncube. Built on the principle of faithful guidance and intentional design, we help individuals and brands bring their visions to life through curated spaces, styling, and creative direction.</p>
         <p style="margin: 0 0 28px; font-size: 16px; line-height: 1.85; color: #5d5a53;">Our work focuses on creating beautiful, functional, and meaningful experiences through interior styling, content creation and event co-ordination.</p>
-        <a class="btn-fn" href="/about" style="display: inline-block; padding: 16px 30px; background: #1a1a18; color: #ffffff; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;">Learn more</a>
+        <a class="btn-fn" href="/about" style="display: inline-block; padding: 16px 30px; background: #1a1a18; color: #ffffff; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;">Meet the team</a>
       </div>
     </section>
 
@@ -344,7 +350,7 @@
 
     <section style="padding: clamp(64px, 8vw, 110px) 5vw;">
       <div style="text-align: center; max-width: 62ch; margin: 0 auto 52px;">
-        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Work portfolio</span>
+        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Work portfolio</span>
         <h2 style="margin: 16px 0 14px; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(28px, 3.6vw, 50px); text-transform: uppercase;">Our projects</h2>
         <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #5d5a53;">A few pieces from our interiors, content and event work.</p>
       </div>
@@ -355,25 +361,25 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; color: #1a1a18;">Lounge Styling</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Interiors</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Interiors</span>
           </div>
         </a>
         <a href="/portfolio" style="display: block; color: inherit;">
           <div style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #ebe7e0;">
-            <img src="https://images.pexels.com/photos/17094504/pexels-photo-17094504.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Photographer standing between studio lights preparing for a shoot" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+            <img src="https://images.pexels.com/photos/17094504/pexels-photo-17094504.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Photographer standing between studio lights preparing for a shoot" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; color: #1a1a18;">Photoshoot Styling</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Content Creation</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Content Creation</span>
           </div>
         </a>
         <a href="/portfolio" style="display: block; color: inherit;">
           <div style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #ebe7e0;">
-            <img src="https://images.pexels.com/photos/7248005/pexels-photo-7248005.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Elegantly styled event table with floral decor and place settings" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+            <img src="https://images.pexels.com/photos/7248005/pexels-photo-7248005.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Elegantly styled event table with floral decor and place settings" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600; color: #1a1a18;">Table Styling</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Events</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Events</span>
           </div>
         </a>
       </div>
@@ -385,7 +391,7 @@
     <section style="padding: clamp(56px, 7vw, 96px) 5vw; background: #f5f2ec;">
       <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 32px;">
         <div>
-          <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Recent blog</span>
+          <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Recent blog</span>
           <h2 style="margin: 14px 0 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 3.2vw, 42px); text-transform: uppercase;">Articles</h2>
         </div>
         <a href="/articles" style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;">View all</a>
@@ -396,7 +402,7 @@
             <img src="/assets/about-lounge.jpg" alt="Styled lounge with warm lighting by Fainica Consultancy" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
           </div>
           <div style="padding: 24px 24px 28px;">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Interior Styling</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Interior Styling</div>
             <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4; color: #1a1a18;">Simple Interior Styling Tips for a Balanced Home</h3>
           </div>
         </a>
@@ -405,7 +411,7 @@
             <img src="https://images.pexels.com/photos/17094504/pexels-photo-17094504.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Photographer standing between studio lights preparing for a shoot" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
           </div>
           <div style="padding: 24px 24px 28px;">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Content Creation</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Content Creation</div>
             <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4; color: #1a1a18;">Create Engaging Social Media Content for Your Business</h3>
           </div>
         </a>
@@ -414,7 +420,7 @@
             <img src="https://images.pexels.com/photos/7248005/pexels-photo-7248005.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Elegantly styled event table with floral decor and place settings" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
           </div>
           <div style="padding: 24px 24px 28px;">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Event Co-ordination</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Event Co-ordination</div>
             <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4; color: #1a1a18;">Plan a Stress-Free Event: Simple Co-ordination Tips</h3>
           </div>
         </a>
@@ -463,11 +469,11 @@
     </div>
     <div class="row g-5 justify-content-center" style="margin-top: 36px;">
       <div class="col-12 col-md-5 col-lg-4" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-        <h3 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Services</h3>
+        <h2 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Services</h2>
         <a href="/interior-styling" style="font-size: 14px; color: rgba(255,255,255,0.66);">Interior Styling</a><a href="/content-creation" style="font-size: 14px; color: rgba(255,255,255,0.66);">Content Creation</a><a href="/event-coordination" style="font-size: 14px; color: rgba(255,255,255,0.66);">Event Co-ordination</a><a href="/article-wardrobe-styling-tips" style="font-size: 14px; color: rgba(255,255,255,0.66);">Wardrobe styling</a>
       </div>
       <div class="col-12 col-md-5 col-lg-4" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-        <h3 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Have a question?</h3>
+        <h2 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Have a question?</h2>
         <a href="mailto:Fainicaconsultancy2@gmail.com" style="font-size: 14px; color: rgba(255,255,255,0.66);">Fainicaconsultancy2@gmail.com</a>
         <a href="https://wa.me/27817620160" target="_blank" rel="noopener" style="font-size: 14px; color: rgba(255,255,255,0.66);">081 762 0160 (WhatsApp)</a>
         <a href="tel:+27828377562" style="font-size: 14px; color: rgba(255,255,255,0.66);">082 837 7562 (calls)</a>

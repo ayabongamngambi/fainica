@@ -62,14 +62,20 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="preload" href="/assets/fonts/archivo-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="/assets/bootstrap-custom.min.css" />
 <noscript><style>.wa-float { opacity: 1 !important; visibility: visible !important; transform: none !important; }</style></noscript>
 <style>
+@font-face { font-family: Archivo; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/archivo-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: Archivo; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/archivo-latin-500-normal.woff2) format("woff2"); }
+@font-face { font-family: Archivo; font-style: normal; font-weight: 600; font-display: swap; src: url(/assets/fonts/archivo-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: Archivo; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/archivo-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 300; font-display: swap; src: url(/assets/fonts/barlow-latin-300-normal.woff2) format("woff2"); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/barlow-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/barlow-latin-500-normal.woff2) format("woff2"); }
   body { margin: 0; background: #ffffff; }
-  a { color: oklch(0.56 0.075 72); text-decoration: none; }
+  a { color: oklch(0.52 0.075 72); text-decoration: none; }
   a:hover { color: #1a1a18; }
   .sl-btn:hover { background: rgba(20,20,15,0.78) !important; }
   .lb-btn:hover { background: rgba(255,255,255,0.14) !important; }
@@ -125,7 +131,7 @@
     <section id="interior-styling" style="padding: clamp(56px, 7vw, 100px) 5vw;">
       <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 32px;">
         <div>
-          <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.56 0.075 72);">01</span>
+          <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.52 0.075 72);">01</span>
           <h2 style="margin: 14px 0 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 3.2vw, 42px); text-transform: uppercase;">Interior Styling</h2>
         </div>
         <a href="/interior-styling" style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;">About Interior Styling</a>
@@ -141,7 +147,7 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">Bedroom Styling</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Interiors</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Interiors</span>
           </div>
         </div>
         <div class="proj" data-title="Bathroom Styling" data-kind="Interiors" style="color: inherit;">
@@ -154,7 +160,7 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">Bathroom Styling</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Interiors</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Interiors</span>
           </div>
         </div>
         <div class="proj" data-title="Kitchen Styling" data-kind="Interiors" style="color: inherit;">
@@ -163,7 +169,7 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">Kitchen Styling</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Interiors</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Interiors</span>
           </div>
         </div>
         <div class="proj" data-title="Lounge Styling" data-kind="Interiors" style="color: inherit;">
@@ -172,7 +178,7 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">Lounge Styling</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Interiors</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Interiors</span>
           </div>
         </div>
         <div class="proj" data-title="Commercial Space" data-kind="Commercial" style="color: inherit;">
@@ -185,7 +191,7 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">Commercial Space</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Commercial</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Commercial</span>
           </div>
         </div>
         <div class="proj" data-title="Dining Styling" data-kind="Interiors" style="color: inherit;">
@@ -194,7 +200,7 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">Dining Styling</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Interiors</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Interiors</span>
           </div>
         </div>
       </div>
@@ -202,7 +208,7 @@
     <section id="content-creation" style="padding: clamp(56px, 7vw, 100px) 5vw; background: #f5f2ec;">
       <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 32px;">
         <div>
-          <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.56 0.075 72);">02</span>
+          <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.52 0.075 72);">02</span>
           <h2 style="margin: 14px 0 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 3.2vw, 42px); text-transform: uppercase;">Content Creation</h2>
         </div>
         <a href="/content-creation" style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;">About Content Creation</a>
@@ -214,12 +220,12 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">Wardrobe Styling</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Content Creation</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Content Creation</span>
           </div>
         </div>
         <div class="proj" data-title="Photoshoot Styling" data-kind="Content Creation" style="color: inherit;">
           <div class="proj-media" title="Click to expand" style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #ebe7e0; cursor: zoom-in;">
-            <img data-frame src="https://images.pexels.com/photos/17094504/pexels-photo-17094504.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Photographer standing between studio lights preparing for a shoot" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: 1;" /><img data-frame src="https://images.pexels.com/photos/17094508/pexels-photo-17094508.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Photographer standing between studio lights preparing for a shoot" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: 0;" />
+            <img data-frame src="https://images.pexels.com/photos/17094504/pexels-photo-17094504.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Photographer standing between studio lights preparing for a shoot" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: 1;" /><img data-frame src="https://images.pexels.com/photos/17094508/pexels-photo-17094508.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Photographer standing between studio lights preparing for a shoot" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: 0;" />
               <button type="button" data-act="prev" class="sl-btn" aria-label="Previous photo" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; border: 0; padding: 0; cursor: pointer; background: rgba(20,20,15,0.42); color: #ffffff; font-family: Archivo, sans-serif; font-size: 20px; line-height: 1;">&#8249;</button>
               <button type="button" data-act="next" class="sl-btn" aria-label="Next photo" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; border: 0; padding: 0; cursor: pointer; background: rgba(20,20,15,0.42); color: #ffffff; font-family: Archivo, sans-serif; font-size: 20px; line-height: 1;">&#8250;</button>
               <div style="position: absolute; left: 0; right: 0; bottom: 14px; display: flex; justify-content: center; gap: 7px;"><button type="button" data-dot="0" aria-label="Photoshoot Styling photo 1" style="width: 22px; height: 22px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; background: transparent; background-image: radial-gradient(#ffffff 0 3.5px, transparent 3.5px);"></button><button type="button" data-dot="1" aria-label="Photoshoot Styling photo 2" style="width: 22px; height: 22px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; background: transparent; background-image: radial-gradient(rgba(255,255,255,0.42) 0 3.5px, transparent 3.5px);"></button></div>
@@ -227,16 +233,16 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">Photoshoot Styling</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Content Creation</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Content Creation</span>
           </div>
         </div>
         <div class="proj" data-title="Creative Direction" data-kind="Content Creation" style="color: inherit;">
           <div class="proj-media" title="Click to expand" style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #ebe7e0; cursor: zoom-in;">
-            <img data-frame src="https://images.pexels.com/photos/4882161/pexels-photo-4882161.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Cameraman setting up a camera for a video shoot" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: 1;" />
+            <img data-frame src="https://images.pexels.com/photos/4882161/pexels-photo-4882161.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Cameraman setting up a camera for a video shoot" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: 1;" />
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">Creative Direction</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Content Creation</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Content Creation</span>
           </div>
         </div>
       </div>
@@ -244,7 +250,7 @@
     <section id="event-coordination" style="padding: clamp(56px, 7vw, 100px) 5vw;">
       <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 32px;">
         <div>
-          <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.56 0.075 72);">03</span>
+          <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.52 0.075 72);">03</span>
           <h2 style="margin: 14px 0 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 3.2vw, 42px); text-transform: uppercase;">Event Co-ordination</h2>
         </div>
         <a href="/event-coordination" style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;">About Event Co-ordination</a>
@@ -252,29 +258,29 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
         <div class="proj" data-title="Table Styling" data-kind="Events" style="color: inherit;">
           <div class="proj-media" title="Click to expand" style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #ebe7e0; cursor: zoom-in;">
-            <img data-frame src="https://images.pexels.com/photos/7248005/pexels-photo-7248005.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Elegantly styled event table with floral decor and place settings" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: 1;" />
+            <img data-frame src="https://images.pexels.com/photos/7248005/pexels-photo-7248005.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Elegantly styled event table with floral decor and place settings" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: 1;" />
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">Table Styling</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Events</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Events</span>
           </div>
         </div>
         <div class="proj" data-title="Reception Setup" data-kind="Events" style="color: inherit;">
           <div class="proj-media" title="Click to expand" style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #ebe7e0; cursor: zoom-in;">
-            <img data-frame src="https://images.pexels.com/photos/35143280/pexels-photo-35143280/free-photo-of-elegant-wedding-table-setup-with-reserved-sign.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Elegant wedding table setup with reserved sign" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: 1;" />
+            <img data-frame src="https://images.pexels.com/photos/35143280/pexels-photo-35143280/free-photo-of-elegant-wedding-table-setup-with-reserved-sign.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Elegant wedding table setup with reserved sign" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: 1;" />
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">Reception Setup</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Events</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Events</span>
           </div>
         </div>
         <div class="proj" data-title="Seating and Florals" data-kind="Events" style="color: inherit;">
           <div class="proj-media" title="Click to expand" style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #ebe7e0; cursor: zoom-in;">
-            <img data-frame src="https://images.pexels.com/photos/17001829/pexels-photo-17001829/free-photo-of-row-of-reserved-seats.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Row of reserved seats with floral decor at an event" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: 1;" />
+            <img data-frame src="https://images.pexels.com/photos/17001829/pexels-photo-17001829/free-photo-of-row-of-reserved-seats.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Row of reserved seats with floral decor at an event" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 550ms ease; opacity: 1;" />
           </div>
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 20px; background: #f5f2ec;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 600;">Seating and Florals</h3>
-            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Events</span>
+            <span style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Events</span>
           </div>
         </div>
       </div>
@@ -294,11 +300,11 @@
     </div>
     <div class="row g-5 justify-content-center" style="margin-top: 36px;">
       <div class="col-12 col-md-5 col-lg-4" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-        <h3 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Services</h3>
+        <h2 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Services</h2>
         <a href="/interior-styling" style="font-size: 14px; color: rgba(255,255,255,0.66);">Interior Styling</a><a href="/content-creation" style="font-size: 14px; color: rgba(255,255,255,0.66);">Content Creation</a><a href="/event-coordination" style="font-size: 14px; color: rgba(255,255,255,0.66);">Event Co-ordination</a><a href="/article-wardrobe-styling-tips" style="font-size: 14px; color: rgba(255,255,255,0.66);">Wardrobe styling</a>
       </div>
       <div class="col-12 col-md-5 col-lg-4" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-        <h3 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Have a question?</h3>
+        <h2 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Have a question?</h2>
         <a href="mailto:Fainicaconsultancy2@gmail.com" style="font-size: 14px; color: rgba(255,255,255,0.66);">Fainicaconsultancy2@gmail.com</a>
         <a href="https://wa.me/27817620160" target="_blank" rel="noopener" style="font-size: 14px; color: rgba(255,255,255,0.66);">081 762 0160 (WhatsApp)</a>
         <a href="tel:+27828377562" style="font-size: 14px; color: rgba(255,255,255,0.66);">082 837 7562 (calls)</a>

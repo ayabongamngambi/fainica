@@ -62,14 +62,20 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="preload" href="/assets/fonts/archivo-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="/assets/bootstrap-custom.min.css" />
 <noscript><style>.wa-float { opacity: 1 !important; visibility: visible !important; transform: none !important; }</style></noscript>
 <style>
+@font-face { font-family: Archivo; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/archivo-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: Archivo; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/archivo-latin-500-normal.woff2) format("woff2"); }
+@font-face { font-family: Archivo; font-style: normal; font-weight: 600; font-display: swap; src: url(/assets/fonts/archivo-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: Archivo; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/archivo-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 300; font-display: swap; src: url(/assets/fonts/barlow-latin-300-normal.woff2) format("woff2"); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/barlow-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/barlow-latin-500-normal.woff2) format("woff2"); }
   body { margin: 0; background: #ffffff; }
-  a { color: oklch(0.56 0.075 72); text-decoration: none; }
+  a { color: oklch(0.52 0.075 72); text-decoration: none; }
   a:hover { color: #1a1a18; }
   .sl-btn:hover { background: rgba(20,20,15,0.78) !important; }
   .lb-btn:hover { background: rgba(255,255,255,0.14) !important; }
@@ -127,7 +133,7 @@
         <img src="/assets/about-lounge.jpg" alt="Curated interior styling project by Fainica Consultancy" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
       </div>
       <div>
-        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.56 0.075 72);">About &middot; Est 2025</span>
+        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.52 0.075 72);">About &middot; Est 2025</span>
         <h2 style="margin: 16px 0 24px; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(28px, 3.6vw, 50px); line-height: 1.1; text-transform: uppercase;">Styling and creative direction, done with intention</h2>
         <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.85; color: #5d5a53;">Fainica Consultancy is a creative consultancy founded by Faith Malesoena and Duduzile Monica Mncube. Built on the principle of faithful guidance and intentional design, we help individuals and brands bring their visions to life through curated spaces, styling, and creative direction.</p>
         <p style="margin: 0 0 28px; font-size: 16px; line-height: 1.85; color: #5d5a53;">Our work focuses on creating beautiful, functional, and meaningful experiences through interior styling, content creation and event co-ordination.</p>
@@ -156,7 +162,7 @@
 
     <section style="padding: clamp(56px, 7vw, 100px) 5vw; background: #f5f2ec;">
       <div style="text-align: center; margin-bottom: 44px;">
-        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Our process</span>
+        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Our process</span>
         <h2 style="margin: 16px 0 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(26px, 3.4vw, 46px); text-transform: uppercase;">How we work</h2>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
@@ -180,7 +186,7 @@
 
     <section style="padding: clamp(64px, 8vw, 110px) 5vw;">
       <div style="text-align: center; margin-bottom: 48px;">
-        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.56 0.075 72);">About us</span>
+        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.52 0.075 72);">About us</span>
         <h2 style="margin: 16px 0 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(26px, 3.4vw, 46px); text-transform: uppercase;">Our team</h2>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px;">
@@ -190,10 +196,10 @@
           </div>
           <div style="padding: 30px 30px 34px;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600;">Duduzile Monica Mncube</h3>
-            <div style="margin: 8px 0 16px; font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Founder</div>
+            <div style="margin: 8px 0 16px; font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Founder</div>
             <p style="margin: 0 0 12px; font-size: 15px; line-height: 1.8; color: #5d5a53;">A creative with an eye for detail and a deep appreciation for beauty in everyday elements, colour, texture, light, and space.</p>
             <p style="margin: 0 0 12px; font-size: 15px; line-height: 1.8; color: #5d5a53;">With a background in Fine &amp; Applied Arts, Duduzile evolved into a visual artist before expanding into interior decorating, styling, and wardrobe consultancy. She brings a playful yet refined artistic touch, transforming ordinary spaces and concepts into visually striking experiences.</p>
-            <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #8a8478;">If it can be styled, she is already reimagining it.</p>
+            <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #736d61;">If it can be styled, she is already reimagining it.</p>
           </div>
         </div>
         <div style="background: #f5f2ec;">
@@ -202,10 +208,10 @@
           </div>
           <div style="padding: 30px 30px 34px;">
             <h3 style="margin: 0; font-family: Archivo, sans-serif; font-size: 21px; font-weight: 600;">Faith Malesoena</h3>
-            <div style="margin: 8px 0 16px; font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Co-founder</div>
+            <div style="margin: 8px 0 16px; font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Co-founder</div>
             <p style="margin: 0 0 12px; font-size: 15px; line-height: 1.8; color: #5d5a53;">A creative at heart, structured, practical, and intentional. Faith has the ability to imagine bold ideas and strategically bring them to life. With a strong background in administration, she is highly organised, observant, and always thinking ahead.</p>
             <p style="margin: 0 0 12px; font-size: 15px; line-height: 1.8; color: #5d5a53;">She has a natural eye for detail and effortless style, from personal presentation to transforming spaces. She brings balance to the brand: creativity grounded in logic.</p>
-            <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #8a8478;">The calm thinker. The style curator. The one who turns ideas into beautifully executed realities.</p>
+            <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #736d61;">The calm thinker. The style curator. The one who turns ideas into beautifully executed realities.</p>
           </div>
         </div>
       </div>
@@ -213,7 +219,7 @@
 
     <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(32px, 5vw, 72px); align-items: center; padding: clamp(64px, 8vw, 110px) 5vw; background: #f5f2ec;">
       <div>
-        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Why choose us</span>
+        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Why choose us</span>
         <h2 style="margin: 16px 0 22px; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(26px, 3.4vw, 46px); line-height: 1.12; text-transform: uppercase;">We make perfection</h2>
         <p style="margin: 0 0 26px; font-size: 16px; line-height: 1.85; color: #5d5a53;">We work with individuals, brands, and businesses who are ready to grow, elevate, and move with purpose. With every client, we aim to deliver excellence, intentionality and results.</p>
         <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px;"><li style="display: flex; gap: 14px; align-items: baseline; font-size: 16px; color: #3a3833;"><span style="width: 7px; height: 7px; flex-shrink: 0; background: oklch(0.62 0.09 75); transform: translateY(-3px);"></span>Creative and personalised approach</li><li style="display: flex; gap: 14px; align-items: baseline; font-size: 16px; color: #3a3833;"><span style="width: 7px; height: 7px; flex-shrink: 0; background: oklch(0.62 0.09 75); transform: translateY(-3px);"></span>Strong attention to detail</li><li style="display: flex; gap: 14px; align-items: baseline; font-size: 16px; color: #3a3833;"><span style="width: 7px; height: 7px; flex-shrink: 0; background: oklch(0.62 0.09 75); transform: translateY(-3px);"></span>Curated styling and sourcing</li><li style="display: flex; gap: 14px; align-items: baseline; font-size: 16px; color: #3a3833;"><span style="width: 7px; height: 7px; flex-shrink: 0; background: oklch(0.62 0.09 75); transform: translateY(-3px);"></span>Faith-driven business values</li><li style="display: flex; gap: 14px; align-items: baseline; font-size: 16px; color: #3a3833;"><span style="width: 7px; height: 7px; flex-shrink: 0; background: oklch(0.62 0.09 75); transform: translateY(-3px);"></span>A fresh perspective on modern African living</li></ul>
@@ -237,11 +243,11 @@
     </div>
     <div class="row g-5 justify-content-center" style="margin-top: 36px;">
       <div class="col-12 col-md-5 col-lg-4" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-        <h3 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Services</h3>
+        <h2 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Services</h2>
         <a href="/interior-styling" style="font-size: 14px; color: rgba(255,255,255,0.66);">Interior Styling</a><a href="/content-creation" style="font-size: 14px; color: rgba(255,255,255,0.66);">Content Creation</a><a href="/event-coordination" style="font-size: 14px; color: rgba(255,255,255,0.66);">Event Co-ordination</a><a href="/article-wardrobe-styling-tips" style="font-size: 14px; color: rgba(255,255,255,0.66);">Wardrobe styling</a>
       </div>
       <div class="col-12 col-md-5 col-lg-4" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-        <h3 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Have a question?</h3>
+        <h2 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Have a question?</h2>
         <a href="mailto:Fainicaconsultancy2@gmail.com" style="font-size: 14px; color: rgba(255,255,255,0.66);">Fainicaconsultancy2@gmail.com</a>
         <a href="https://wa.me/27817620160" target="_blank" rel="noopener" style="font-size: 14px; color: rgba(255,255,255,0.66);">081 762 0160 (WhatsApp)</a>
         <a href="tel:+27828377562" style="font-size: 14px; color: rgba(255,255,255,0.66);">082 837 7562 (calls)</a>

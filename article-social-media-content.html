@@ -81,14 +81,20 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="preload" href="/assets/fonts/archivo-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="/assets/bootstrap-custom.min.css" />
 <noscript><style>.wa-float { opacity: 1 !important; visibility: visible !important; transform: none !important; }</style></noscript>
 <style>
+@font-face { font-family: Archivo; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/archivo-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: Archivo; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/archivo-latin-500-normal.woff2) format("woff2"); }
+@font-face { font-family: Archivo; font-style: normal; font-weight: 600; font-display: swap; src: url(/assets/fonts/archivo-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: Archivo; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/archivo-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 300; font-display: swap; src: url(/assets/fonts/barlow-latin-300-normal.woff2) format("woff2"); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/barlow-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: Barlow; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/barlow-latin-500-normal.woff2) format("woff2"); }
   body { margin: 0; background: #ffffff; }
-  a { color: oklch(0.56 0.075 72); text-decoration: none; }
+  a { color: oklch(0.52 0.075 72); text-decoration: none; }
   a:hover { color: #1a1a18; }
   .sl-btn:hover { background: rgba(20,20,15,0.78) !important; }
   .lb-btn:hover { background: rgba(255,255,255,0.14) !important; }
@@ -172,7 +178,7 @@
 
     <section style="padding: clamp(56px, 7vw, 96px) 5vw; background: #f5f2ec;">
       <div style="margin-bottom: 32px;">
-        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Keep reading</span>
+        <span style="font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Keep reading</span>
         <h2 style="margin: 14px 0 0; font-family: Archivo, sans-serif; font-weight: 700; font-size: clamp(24px, 3.2vw, 42px); text-transform: uppercase;">More articles</h2>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
@@ -181,7 +187,7 @@
             <img src="/assets/about-lounge.jpg" alt="Styled lounge with warm lighting by Fainica Consultancy" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
           </div>
           <div style="padding: 24px 24px 28px;">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Interior Styling</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Interior Styling</div>
             <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4; color: #1a1a18;">Simple Interior Styling Tips for a Balanced Home</h3>
           </div>
         </a>
@@ -190,7 +196,7 @@
             <img src="/assets/ig-6-wardrobe.jpg" alt="Wardrobe styling look by Fainica Consultancy" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
           </div>
           <div style="padding: 24px 24px 28px;">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Wardrobe Styling</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Wardrobe Styling</div>
             <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4; color: #1a1a18;">Build a Versatile Wardrobe: Simple Styling Tips</h3>
           </div>
         </a>
@@ -199,7 +205,7 @@
             <img src="https://images.pexels.com/photos/7248005/pexels-photo-7248005.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Elegantly styled event table with floral decor and place settings" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
           </div>
           <div style="padding: 24px 24px 28px;">
-            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.56 0.075 72);">Event Co-ordination</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.52 0.075 72);">Event Co-ordination</div>
             <h3 style="margin: 12px 0 0; font-family: Archivo, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4; color: #1a1a18;">Plan a Stress-Free Event: Simple Co-ordination Tips</h3>
           </div>
         </a>
@@ -220,11 +226,11 @@
     </div>
     <div class="row g-5 justify-content-center" style="margin-top: 36px;">
       <div class="col-12 col-md-5 col-lg-4" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-        <h3 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Services</h3>
+        <h2 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Services</h2>
         <a href="/interior-styling" style="font-size: 14px; color: rgba(255,255,255,0.66);">Interior Styling</a><a href="/content-creation" style="font-size: 14px; color: rgba(255,255,255,0.66);">Content Creation</a><a href="/event-coordination" style="font-size: 14px; color: rgba(255,255,255,0.66);">Event Co-ordination</a><a href="/article-wardrobe-styling-tips" style="font-size: 14px; color: rgba(255,255,255,0.66);">Wardrobe styling</a>
       </div>
       <div class="col-12 col-md-5 col-lg-4" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-        <h3 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Have a question?</h3>
+        <h2 style="margin: 0 0 8px; font-family: Archivo, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #ffffff;">Have a question?</h2>
         <a href="mailto:Fainicaconsultancy2@gmail.com" style="font-size: 14px; color: rgba(255,255,255,0.66);">Fainicaconsultancy2@gmail.com</a>
         <a href="https://wa.me/27817620160" target="_blank" rel="noopener" style="font-size: 14px; color: rgba(255,255,255,0.66);">081 762 0160 (WhatsApp)</a>
         <a href="tel:+27828377562" style="font-size: 14px; color: rgba(255,255,255,0.66);">082 837 7562 (calls)</a>
